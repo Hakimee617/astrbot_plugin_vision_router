@@ -1,6 +1,6 @@
 name: vision_router
 display_name: Vision Router 识图路由
 desc: 为纯文本 LLM 提供视觉能力：自动识别消息中的图片，调用可识图的视觉模型 API（OpenAI 兼容，支持 Qwen-VL / GLM-4V / GPT-4o / DeepSeek-V4-Flash-Vision 等），返回图片描述，让纯文本模型“看到”图片。
-author: Firefly
+author: Hakimee617
 version: v1.0.0
 repo: https://github.com/Firefly/astrbot_plugin_vision_router
