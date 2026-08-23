@@ -6,7 +6,7 @@
 - 支持触发模式：auto（自动）/ command（指令触发）/ both（两者）
 - 支持任意 OpenAI 兼容视觉端点：Qwen-VL、GLM-4V、GPT-4o、DeepSeek-V4-Flash-Vision 等
 
-作者：Firefly
+作者：Hakimee617
 """
 
 import asyncio
