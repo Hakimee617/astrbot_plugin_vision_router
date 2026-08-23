@@ -1,0 +1,68 @@
+{
+  "enabled": {
+    "description": "启用插件",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后插件不响应任何消息"
+  },
+  "api_base": {
+    "description": "视觉模型 API 地址（OpenAI 兼容）",
+    "type": "string",
+    "default": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "hint": "阿里云百炼 Qwen-VL：https://dashscope.aliyuncs.com/compatible-mode/v1；智谱 GLM-4V：https://open.bigmodel.cn/api/paas/v4；OpenAI：https://api.openai.com/v1"
+  },
+  "api_key": {
+    "description": "视觉模型 API Key",
+    "type": "string",
+    "default": "",
+    "hint": "在对应平台的开发者控制台申请"
+  },
+  "model": {
+    "description": "视觉模型名称",
+    "type": "string",
+    "default": "qwen-vl-max",
+    "hint": "示例：qwen-vl-max、qwen-vl-plus、glm-4v-plus、gpt-4o、gpt-4o-mini、deepseek-v4-flash-vision-exp 等"
+  },
+  "trigger_mode": {
+    "description": "触发模式",
+    "type": "string",
+    "default": "auto",
+    "hint": "auto=收到图片自动识图；command=仅当消息以指令开头时才识图；both=两者都触发"
+  },
+  "command": {
+    "description": "触发指令（command/both 模式用）",
+    "type": "string",
+    "default": "/看图",
+    "hint": "指令后跟的文本可作为自定义识图提示词，例如：/看图 这张图里有什么文字"
+  },
+  "prompt": {
+    "description": "默认识图提示词",
+    "type": "string",
+    "default": "请详细描述这张图片的内容，包括主体、场景、文字、风格等，用中文回答。",
+    "hint": "发送给视觉模型的默认指令"
+  },
+  "reply_prefix": {
+    "description": "回复前缀",
+    "type": "string",
+    "default": "【识图】",
+    "hint": "识图结果前加的前缀，方便区分来源"
+  },
+  "timeout": {
+    "description": "API 请求超时（秒）",
+    "type": "int",
+    "default": 60,
+    "hint": "视觉模型响应较慢时可调大"
+  },
+  "max_retries": {
+    "description": "失败重试次数",
+    "type": "int",
+    "default": 2,
+    "hint": "API 调用失败时的重试次数"
+  },
+  "show_typing": {
+    "description": "识图前发送“正在识图”提示",
+    "type": "bool",
+    "default": true,
+    "hint": "避免用户等待时以为机器人没反应"
+  }
+}
